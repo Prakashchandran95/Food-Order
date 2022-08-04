@@ -1,0 +1,59 @@
+<div class="container">
+  <div *ngIf="!submitted" align="center">
+    <h1 style="font-weight: bold; color:white">Contact</h1>
+    <form #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm.value)">
+      <div class="parent">
+        <label for="Name" style="font-weight: bold; color:white">Name</label>
+        <input type="text" class="form-control" name="Name" ngModel #name="ngModel" required>
+        <div class="alert alert-danger" [hidden]="name.valid || name.pristine">Name is required</div>
+      </div>
+
+      <div class="parent">
+        <label for="Email" style="font-weight: bold; color:white">Email</label>
+        <input type="text" class="form-control" name="Email" ngModel #alterEgo="ngModel" required>
+        <div class="alert alert-danger" [hidden]="alterEgo.valid || alterEgo.pristine"> Email is required</div>
+      </div>
+      
+      <div class="parent">
+        <label for="reason" style="font-weight: bold; color:white">Reason</label>
+        <select class="form-control" name="reason" ngModel #power="ngModel" required>
+          <option *ngFor="let p of status" [value]="p">{{ p }}</option>
+        </select>
+        <div class="alert alert-danger" [hidden]="power.valid || power.pristine">Current-status is required</div>
+      </div>
+
+      <div class="parent" style="height:82px">
+        <label for="message" style="color:white"><b style="color:white">Short-Message</b>&nbsp;(Optional)</label>
+        <textarea type="text" class="form-control"  name="message" ngModel #message="ngModel">Enter short discription</textarea>
+        <div class="alert alert-danger" [hidden]="alterEgo.valid || alterEgo.pristine">Short-message is required</div>
+      </div>
+
+      <button type="submit" class="btn btn-default" style="margin:10px; color:black" [disabled]="!heroForm.valid">Submit</button>
+    </form>
+  </div>
+  <div *ngIf="submitted" align="center">
+    <h2 style="font-weight: bold; color:white">You submitted the following:</h2>
+    <div class="row">
+      <div class="child" align="left" style="font-weight: bold; color:white">Name :</div>
+      <div class="child">{{ form.Name }}</div>
+    </div>
+    <div class="row">
+      <div class="child" align="left" style="font-weight: bold; color:white">Email :</div>
+      <div class="child">{{ form.Email }}</div>
+    </div>
+    <div class="row">
+      <div class="child" style="font-weight: bold; color:white">Current-Status :</div>
+      <div class="child">{{ form.status }}</div>
+    </div>
+    <div class="row">
+      <div class="child" style="font-weight: bold; color:white">Message :</div>
+      <div class="child">{{ form.message }}</div>
+    </div>
+    <br />
+    Raw output from form.value:
+    <br />
+    {{ form | json }}
+    <br /><br />
+    <button class="btn btn-default" style="margin:10px;" (click)="submitted=false">Edit</button>
+  </div>
+</div>

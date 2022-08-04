@@ -1,0 +1,110 @@
+table {
+  width: 90%;
+  margin:auto;
+}
+.example-container {
+  height: 700px;
+  max-width: 100%;
+  overflow: auto;
+}
+.tab{
+  background-color:black;
+  opacity:0.9;
+  border: #050505;
+  position: relative;
+  top:5px
+}
+
+::ng-deep  .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+}
+
+.mat-paginator{
+  margin:auto;
+  background-color:transparent;
+}
+
+.paginator{
+  border-color: #050505;
+}
+
+.mat-column-position{
+  text-align: center;
+  width: 10%;
+}
+.mat-column-imageurl{
+  text-align: center;
+  width: 20%;
+}
+.mat-column-details{
+  text-align: center;
+  width: 40%;
+}
+.mat-column-price{
+  text-align: center;
+  width: 15%;
+}
+.mat-column-addtocart{
+  text-align: center;
+  width: 15%;
+}
+
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.button {
+  position: relative;
+  background-color: #c82309;
+  border: none;
+  font-size: 14px;
+  color: #060606;
+  width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #d6219a;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.column1 {
+  float: left;
+  width: 60%;
+}
+
+.cart {
+  position: relative;
+  top:5px
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,22 @@
+[
+  {   
+      "name": "Will Smith",
+      "gender": "Male",
+      "country": "USA"
+  },
+  {
+      "name": "Jackline Joy",
+      "gender": "Female",
+      "country": "Sri Lanak"
+  },
+  {
+    "name": "Amy",
+    "gender": "Female",
+    "country": "Sri Lanak"
+  },
+  {
+    "name": "Zay",
+    "gender": "Female",
+    "country": "Sri Lanak"
+  }
+]

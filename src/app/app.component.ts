@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CartService } from '../services/cart.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-world';
+  myimage:string = "assets/image/workfal.jpg";
+
+  constructor(private cartService: CartService){}
 }

@@ -1,0 +1,49 @@
+    
+  h1 {
+    line-height: .95;
+    color:white;
+    font-weight: 900;
+    font-size: 150px;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    align-content: center;
+  }
+  
+  h3{
+    color:#d9f9f7;
+    text-align: center;
+  }
+  b{
+    text-decoration: none;
+  }
+  
+  .btn {
+    margin: 0 auto;
+    width: 170px;
+    height: 60px;
+    padding: 6px 0 0 3px;
+    border: 2px solid gray;
+    border-radius: 2px;
+    background: none;
+    font-size: 30px;
+    line-height: 54px;
+    color: #fff;
+    letter-spacing: .25em;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transition: background .4s, color .4s;
+    transition: background .4s, color .4s;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #333;
+    color: #10151B;
+    opacity: 0.8;
+  }
