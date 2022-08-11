@@ -1,4 +1,4 @@
-# FoodOrdering and Query Features using Angular
+# Food Menu (Cart) and Query Features on a Web app using Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
